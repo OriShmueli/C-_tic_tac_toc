@@ -12,7 +12,7 @@ void winner(string);
 
 int main() {
 	
-	cout << "x you are starting"<<endl;
+	cout << "O you are starting"<<endl;
 
 	Pbrain->draw();
 	while (true)
@@ -21,19 +21,30 @@ int main() {
 		Pbrain->draw();
 		if (Pbrain->win() == 'x') {
 			winner("x win");
+			break;
 		}
-		else if (Pbrain->win = 'o') {
+		if (Pbrain->win() == 'o') {
 			winner("o win");
+			break;
 		}
 		Pbrain->step_x();
 		Pbrain->draw();
-		
 	}
-	system("pause");
+	
 }
 
-void winner(string) {
+void winner(string win) {
 
-	cout << "\n\nyou win\n\n";
-	system("pause");
+	cout << "\n\nyou win: " << win << "\n\n";
+	
+	string restartCommend;
+	cin >> restartCommend;
+	if (restartCommend != "restart")
+	{
+		exit(0);
+	}
+	else
+	{
+		main();
+	}
 }
