@@ -33,110 +33,110 @@ void brain::draw()
 	}
 }
 
-void brain::step_x()
+void brain::step_o()
 {
-	int playerX;
+	int playero;
 	cout << "make your move O : ";
-	cin >> playerX;
+	cin >> playero;
 	cout << "\n";
 
-	if (playerX == 1)
+	if (playero == 1)
 	{
 		map[0][0] = O_player_c;
 		cout << "make your move X\n";
 
 	}
-	else if (playerX == 2) {
+	else if (playero == 2) {
 		map[0][1] = O_player_c;
 		cout << "make your move X\n";
 
 	}
-	else if (playerX == 3) {
+	else if (playero == 3) {
 		map[0][2] = O_player_c;
 		cout << "make your move X\n";
 
 	}
-	else if (playerX == 4) {
+	else if (playero == 4) {
 		map[1][0] = O_player_c;
 		cout << "make your move X\n";
 
 	}
-	else if (playerX == 5) {
+	else if (playero == 5) {
 		map[1][1] = O_player_c;
 		cout << "make your move X\n";
 
 	}
-	else if (playerX == 6) {
+	else if (playero == 6) {
 		map[1][2] = O_player_c;
 		cout << "make your move X\n";
 
 	}
-	else if (playerX == 7) {
+	else if (playero == 7) {
 		map[2][0] = O_player_c;
 		cout << "make your move X\n";
 
 	}
-	else if (playerX == 8) {
+	else if (playero == 8) {
 		map[2][1] = O_player_c;
 		cout << "make your move X\n";
 
 	}
-	else if (playerX == 9) {
+	else if (playero == 9) {
 		map[2][2] = O_player_c;
 		cout << "make your move X\n";
 
 	}
 }
 
-void brain::step_o()
+void brain::step_x()
 {
-	int playerO;
+	int playerx;
 	cout << "make your move X : ";
-	cin >> playerO;
+	cin >> playerx;
 	cout << "\n";
 
-	if (playerO == 1)
+	if (playerx == 1)
 	{
 		map[0][0] = X_player_c;
 		cout << "make your move X\n";
 
 	}
-	else if (playerO == 2) {
+	else if (playerx == 2) {
 		map[0][1] = X_player_c;
 		cout << "make your move X\n";
 
 	}
-	else if (playerO == 3) {
+	else if (playerx == 3) {
 		map[0][2] = X_player_c;
 		cout << "make your move X\n";
 
 	}
-	else if (playerO == 4) {
+	else if (playerx == 4) {
 		map[1][0] = X_player_c;
 		cout << "make your move X\n";
 
 	}
-	else if (playerO == 5) {
+	else if (playerx == 5) {
 		map[1][1] = X_player_c;
 		cout << "make your move X\n";
 
 	}
-	else if (playerO == 6) {
+	else if (playerx == 6) {
 		map[1][2] = X_player_c;
 		cout << "make your move X\n";
 
 	}
-	else if (playerO == 7) {
+	else if (playerx == 7) {
 		map[2][0] = X_player_c;
 		cout << "make your move X\n";
 
 	}
-	else if (playerO == 8) {
+	else if (playerx == 8) {
 		map[2][1] = X_player_c;
 		cout << "make your move X\n";
 
 	}
-	else if (playerO == 9) {
+	else if (playerx == 9) {
 		map[2][2] = X_player_c;
 		cout << "make your move X\n";
 
