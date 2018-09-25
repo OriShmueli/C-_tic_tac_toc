@@ -1,0 +1,3 @@
+﻿  brain.cpp
+d:\ori\programing\visual studio 2017\tic tac toe c++\tic tac toe c++\brain.cpp(197): warning C4715: 'brain::win': not all control paths return a value
+  tic tac toe c++.vcxproj -> D:\ori\Programing\visual studio 2017\tic tac toe c++\Debug\tic tac toe c++.exe
