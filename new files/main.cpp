@@ -14,16 +14,8 @@ void winner(string);
 void vs_pc();
 
 int main() {
-	
 	CommendsSys comsys;
-	
-	
-	
 	vs_pc();
-	
-	
-
-
 }
 
 void Random_brian() {
@@ -42,15 +34,12 @@ void vs_pc() {
 	{
 		Pbrain->step_o();
 		Pbrain->draw();
-		if (Pbrain->win() == 'x') {
-			winner("x win");
+		char win = Pbrain->win(); 
+		if (win == 'x' || win == 'o) {
+			winner(win + " win");
 			break;
 		}
-		if (Pbrain->win() == 'o') {
-			winner("o win");
-			break;
-		}
-		Pbrain->step_o();
+		Pbrain->step_x();
 		Pbrain->draw();
 	}
 
