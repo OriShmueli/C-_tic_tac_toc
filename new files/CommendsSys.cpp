@@ -1,47 +1,34 @@
 #include "CommendsSys.h"
-
-enum playes{
-	witch1,
-	witch2
-};
+#include <string>
 
 
-
-auto Pwitch1 = "->";
-auto Pwitch2 = "";
-auto witch3 = "";
-
-void CommendsSys::selector(int gameMode)
+char CommendsSys::selector()
 {
+	char mode_num;
+
+	menu_start:
+	system("cls");
+
+	cout << "1) you vs pc\n" << endl;
+	Sleep(500);
+	cout << "2) 1 vs 1\n" << endl;
+	Sleep(500);
+	cout << "3) you random pc steps\n" << endl;
+	Sleep(500);
+	cout << "->";
 	
+	cin.get(mode_num);
 
-	this->menu_print();
-
-	while (true)
+	if (mode_num == 3 || mode_num == 2 || mode_num == 1)
 	{
-		if (GetAsyncKeyState(VK_UP))
-		{
-			system("cls");
-			this->menu_print();
-		}
-		else if (GetAsyncKeyState(VK_DOWN))
-		{
-			system("cls");
-			this->menu_print();
-		}
-
-		if (GetAsyncKeyState(VK_TAB))
-		{
-			break;
-		}
+		cout << "\nyou have only 3 options - [1] , [2] , [3]\n";
+		Sleep(3000);
+		goto menu_start;
+	}
+	else
+	{
+		return mode_num;
 	}
 
 	
-}
-
-void CommendsSys::menu_print()
-{
-	cout << Pwitch1 << "you vs pc" << endl;
-	cout << Pwitch2 << "1 vs 1" << endl;
-	cout << witch3 << "you random pc steps"<<endl ;
 }
