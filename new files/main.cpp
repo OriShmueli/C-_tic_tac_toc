@@ -10,54 +10,90 @@ using namespace std;
 brain *Pbrain = new brain();
 
 //voids
-void winner(string);
+void winner(char);
 void vs_pc();
+void one_vs_one();
+void random_brian();
 
 int main() {
-	CommendsSys comsys;
-	vs_pc();
-}
 
-void Random_brian() {
+	CommendsSys *comsys = new CommendsSys;
+	char mun_m = comsys->selector();
+	
+	if (mun_m == '1')
+	{
+		vs_pc();
+	}
 
-	cout << "working" << endl;
+	if (mun_m == '2')
+	{
+		one_vs_one();
+	}
 
+	if (mun_m == '3')
+	{
+		random_brian();
+	}
+	
 }
 
 void vs_pc() {
 
 	cout << "O you are starting" << endl;
 
-
+	int end = 0;
 	Pbrain->draw();
 	while (true)
 	{
+		end++;
 		Pbrain->step_o();
 		Pbrain->draw();
-		char win = Pbrain->win(); 
-		if (win == 'x' || win == 'o) {
-			winner(win + " win");
+		char win = Pbrain->win();
+		if (win == 'x' || win == 'o') {
+			winner(char(win + "win"));
 			break;
-		}
-		Pbrain->step_x();
-		Pbrain->draw();
 	}
+
+	if (win == '/' || end == 9) {
+
+	}
+
+	Pbrain->step_x();
+	Pbrain->draw();
+}
 
 }
 
-void winner(string win) {
+void one_vs_one() {
+
+	cout << "its working\n";
+	system("pause");
+	
+}
+
+void random_brian() {
+
+	cout << "working" << endl;
+	system("pause");
+}
+
+
+void winner(char win) {
 
 	cout << "\n\nyou win: " << win << "\n\n";
 	
-	string restartCommend;
+	CommendsSys comsys;
+
+	string restartCommend;	
 	cin >> restartCommend;
+
 	if (restartCommend != "restart")
 	{
 		exit(0);
 	}
 	else
 	{
-		main();
 		system("cls");
+		comsys.selector();
 	}
 }

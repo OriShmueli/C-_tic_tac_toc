@@ -10,11 +10,21 @@ class brain
 {
 public:
 	
-	
+	void step(char return_player);
 	void draw();
 	void step_o();
 	void step_x();
 
 	char win();
 };
+
+class random : public brain
+{
+public:
+	
+
+
+};
+
+
 

@@ -7,7 +7,7 @@ class CommendsSys
 {
 public:
 	
-	void selector(int gameMode);
-	void menu_print();
+	char selector();
+	
 };
 
